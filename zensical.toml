@@ -47,33 +47,33 @@ Copyright &copy; 2026 はんぺん
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-    {"ホーム" = "/"},
+    {"ホーム" = ""},
     {"ルール" = [
       { "研究員向け" = [
-        {"研究員登録" = "/scientist/create/"},
-        {"Lvアップ処理" = "/scientist/lv.up/"},
-        {"判定" = "/scientist/judgment/"},
-        {"戦闘" = "/scientist/battle/"},
-        {"探索" = "/scientist/search/"},
-        {"トレード" = "/scientist/trade/"},
-        {"報酬" = "/scientist/reward/"},
+        {"研究員登録" = "scientist/create/"},
+        {"Lvアップ処理" = "scientist/lv.up/"},
+        {"判定" = "scientist/judgment/"},
+        {"戦闘" = "scientist/battle/"},
+        {"探索" = "scientist/search/"},
+        {"トレード" = "scientist/trade/"},
+        {"報酬" = "scientist/reward/"},
       ] },
       { "パークマスター向け" = [
-        {"パークマスターの心得" = "/master/tutorial/"},
-        {"戦闘" = "/master/battle/"},
-        {"探索" = "/master/search/"},
-        {"会話" = "/master/talk/"},
-        {"イベント" = "/master/event/"},
-        {"報酬の設定" = "/master/reward/"},
-        {"シナリオ製作" = "/master/scenario/"},
+        {"パークマスターの心得" = "master/tutorial/"},
+        {"戦闘" = "master/battle/"},
+        {"探索" = "master/search/"},
+        {"会話" = "master/talk/"},
+        {"イベント" = "master/event/"},
+        {"報酬の設定" = "master/reward/"},
+        {"シナリオ製作" = "master/scenario/"},
       ]},
     ]},
       {"データ" = [
         { "データ定義" = [
-        {"ステータス・パラメータの種類" = "/data_catalog/parameters/"},
-        {"種族とは" = "/data_catalog/specie/"},
-        {"「役職」とは" = "/data_catalog/class/"},
-        {"アイテムの種類" = "/data_catalog/items/"},
+        {"ステータス・パラメータの種類" = "data_catalog/parameters/"},
+        {"種族とは" = "data_catalog/specie/"},
+        {"「役職」とは" = "data_catalog/class/"},
+        {"アイテムの種類" = "data_catalog/items/"},
       ] },
     ]}
 ]
