@@ -47,8 +47,31 @@ Copyright &copy; 2026 はんぺん
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
+  {"ホーム" = "/"},
+  { "研究員向け" = [
+    {"研究員登録" = "/scientist/create/"},
+    {"Lvアップ処理" = "/scientist/lv.up/"},
+    {"判定" = "/scientist/judgment/"},
+    {"戦闘" = "/scientist/battle/"},
+    {"探索" = "/scientist/search/"},
+    {"トレード" = "/scientist/trade/"},
+    {"報酬" = "/scientist/reward/"},
+  ] },
+  { "パークマスター向け" = [
+    {"パークマスターの心得" = "/master/tutorial/"},
+    {"戦闘" = "/master/battle/"},
+    {"探索" = "/master/search/"},
+    {"会話" = "/master/talk/"},
+    {"報酬" = "/master/reward/"},
+    {"イベント" = "/master/event/"},
+    {"シナリオ製作" = "/master/scenario/"},
+  ]},
+  { "データ定義" = [
+    {"ステータス・パラメータ" = "/data_catalog/parameters/"},
+    {"種族" = "/data_catalog/specie/"},
+    {"アイテム" = "/data_catalog/items/"},
+    {"「役職」" = "/data_catalog/class/"},
+  ] },
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
