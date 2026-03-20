@@ -11,5 +11,8 @@
 キャラクターシートを作りたい！
 :   [研究員登録](./scientist/create.md)
 
+セッションが回せるようになりたい！
+:   [パークマスターの心得](./master/tutorial.md)
+
 シナリオを作りたい！
 :   [シナリオ製作](./master/scenario.md)
