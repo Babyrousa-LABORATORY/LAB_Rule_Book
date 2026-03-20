@@ -9,7 +9,7 @@
 ## とりあえず遊びたいヒト向け {#quick_start}
 
 キャラクターシートを作りたい！
-:   [研究員登録](./scientist/create.md)
+:   [研究員の登録方法](./scientist/create.md)
 
 セッションが回せるようになりたい！
 :   [パークマスターの心得](./master/tutorial.md)
