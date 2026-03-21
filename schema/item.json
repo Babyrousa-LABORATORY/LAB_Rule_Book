@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/item",
+    "title": "Item",
+    "description": "Base properties of items.",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type":"string",
+            "pattern": "[a-z0-9_]",
+            "minLength": 1
+        },
+        "name": {
+            "type":"string",
+            "minLength": 1
+        },
+        "detail": {
+            "type": "string",
+            "minLength": 1
+        },
+        "effect": {
+            "type":"array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "price": {
+            "type":"integer",
+            "minimum": 0
+        },
+        "isSelling": {
+            "type":"boolean",
+            "default": false
+        },
+        "shield": {
+            "$ref": "https://babyrousa_lab_master.org/shield"
+        }
+    },
+    "required": ["id", "name", "isSelling"],
+    "if": {
+        "properties": {
+            "isSelling":{
+                "const": true
+            }
+        }
+    },
+    "then": {
+        "required": ["price"]
+    }
+}

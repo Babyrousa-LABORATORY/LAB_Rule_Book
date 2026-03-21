@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/animal_weapon",
+    "title": "Weapon",
+    "description": "Default Weapon of Animal Girl",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type":"string",
+            "pattern": "[a-z0-9_]",
+            "minLength": 1
+        },
+        "name": {
+            "type":"string",
+            "minLength": 1
+        },
+        "detail": {
+            "type": "string",
+            "minLength": 1
+        },
+        "effect": {
+            "type":"array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "specification":{
+            "type": "array",
+            "items": {
+                "type":"object",
+                "properties": {
+                    "damage": {
+                        "type": "string"
+                    },
+                    "range": {
+                        "type": "string"
+                    },
+                    "effect": {
+                        "type": "array",
+                        "items": {
+                            "type":"string"
+                        }
+                    }
+                },
+                "required": ["damage","range"]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": ["specification"]
+}

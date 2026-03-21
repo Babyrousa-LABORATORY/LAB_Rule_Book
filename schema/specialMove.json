@@ -1,0 +1,62 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/special_move",
+    "title": "Special Move",
+    "description": "Special move which is used in TRPG sections.",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "[a-z0-9_]",
+            "minLength": 1
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "detail": {
+            "type": "string",
+            "minLength": 1
+        },
+        "effect": {
+            "type": "string",
+            "minLength": 1
+        },
+        "humanityRestrict": {
+            "type": "string"
+        },
+        "specification":{
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "useCost": {
+                        "type":"object",
+                        "properties": {
+                            "resource": {
+                                "type":"string",
+                                "minLength": 1
+                            },
+                            "value":{
+                                "type":"integer"
+                            }
+                        }
+                    },
+                    "effect": {
+                        "type":"array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "UpgradeCost": {
+                        "type":"integer"
+                    }
+                },
+                "required": ["useCost", "effect", "levelUpCost"]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": ["id", "name", "effect", "specification"]
+}

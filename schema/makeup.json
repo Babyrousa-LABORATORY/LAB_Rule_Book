@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/makeup",
+    "title": "Makeup",
+    "description": "Makeup, that is called 'Passive Skills' in other game.",
+    "$ref": "https://babyrousa_lab_master.org/special_move",
+    "properties": {
+        "trigger": {
+            "type": "string"
+        }
+    },
+    "required": ["trigger"]
+}

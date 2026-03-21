@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/shield",
+    "title": "Shield",
+    "description": "Item that is used to cut damage when researchers was hit by enemies.",
+    "type":"object",
+    "properties": {
+        "endurance": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "resistance": {
+            "type": "object",
+            "properties": {
+                "invincible": {
+                    "type":"array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "resist": {
+                    "type":"array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "weakness": {
+                    "type":"array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "fatal": {
+                    "type":"array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                }
+            },
+            "minProperties": 1
+        }
+    },
+    "required": ["endurance"]
+}

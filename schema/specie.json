@@ -1,0 +1,90 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://babyrousa_lab_master.org/specie",
+    "title": "Animal Girl Specie Type",
+    "description": "Specie types of animal girl. Researcher must choose at least one of them, and it influence their skills and parameters.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "[a-z0-9_]"
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "init": {
+            "$comment": "Initialize value of parameters",
+            "type": "object",
+            "property": {
+                "hp": {
+                    "type": "string"
+                },
+                "skill": {
+                    "type": "string"
+                },
+                "strength": {
+                    "type": "string"
+                },
+                "agility": {
+                    "type": "string"
+                },
+                "magicPower": {
+                    "type": "string"
+                },
+                "judgment": {
+                    "type": "string"
+                },
+                "constitution": 
+                    {
+                    "type": "string"
+                }
+            },
+            "required": ["hp","skill","strength","agility","magicPower","judgment","constitution"]
+        },
+
+        "growth": {
+            "$comment": "dices of growth",
+            "type": "object",
+            "property": {
+                "hp": {
+                    "type": "string"
+                },
+                "skill": {
+                    "type": "string"
+                },
+                "strength": {
+                    "type": "string"
+                },
+                "agility": {
+                    "type": "string"
+                },
+                "magicPower": {
+                    "type": "string"
+                },
+                "judgment": {
+                    "type": "string"
+                },
+                "constitution": 
+                    {
+                    "type": "string"
+                }
+            },
+            "required": ["hp","skill","strength","agility","magicPower","judgment","constitution"]
+        },
+        "animalWeapon": {
+            "type": "array",
+            "items": {
+                "$ref": "https://babyrousa_lab_master.org/animal_weapon"
+            },
+            "minItems": 1
+        },
+        "makeup": {
+            "type":"array",
+            "items": {
+                "$ref": "https://babyrousa_lab_master.org/makeup"
+            },
+            "minItems": 1
+        }
+    }
+}
