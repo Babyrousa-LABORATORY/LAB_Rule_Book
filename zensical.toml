@@ -75,7 +75,8 @@ nav = [
         {"「役職」とは" = "data_catalog/class/"},
         {"アイテムの種類" = "data_catalog/items/"},
       ] },
-    ]}
+    ]},
+    {"License" = "license.md"}
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
