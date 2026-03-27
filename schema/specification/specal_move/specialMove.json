@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/specification/special_move",
+    "title": "Special Move Specifications",
+    "description": "スペシャル・ムーブの性能。スペシャル・ムーブの特性上、最低1種類は設定しなければならない。",
+    
+    "allOf": [
+        {"$ref": "https://example.com/babyrousa_lab/specification"},
+        {
+            "properties": {
+                "useCost": {
+                    "type":"object",
+                    "properties": {
+                        "resource": {
+                            "type":"string",
+                            "minLength": 1
+                        },
+                        "value":{
+                            "type":"integer"
+                        }
+                    }
+                },
+                "effect": {
+                    "type":"array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "upgradeCost": {
+                    "type":"integer"
+                }
+            },
+            "required": ["useCost", "effect"]
+        }
+    ]
+}

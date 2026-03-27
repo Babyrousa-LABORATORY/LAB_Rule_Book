@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/specification/weapon",
+    "title": "Weapon Specifications",
+    "description": "アイテムの武器としての性能。アニマルウェポンもこれを参照する。",
+    "allOf": [
+        {"$ref": "https://example.com/babyrousa_lab/specification"},
+        {
+            "properties": {
+                "effect": {
+                    "description": "Weapon's effect which trigger is only equipped",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "attack": {
+                    "type":"array",
+                    "items": {
+                        "type":"object",
+                        "properties": {
+                            "damage": {
+                                "type": "string"
+                            },
+                            "range": {
+                                "type": "string"
+                            },
+                            "effect": {
+                                "type": "array",
+                                "items": {
+                                    "type":"string"
+                                }
+                            },
+                            "trigger": {
+                                "type":"string",
+                                "minLength": 1
+                            }
+                        },
+                        "required": ["damage","range"]
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                }
+            },
+            "required": ["attack"]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/special_move/makeup",
+    "title": "Makeup",
+    "description": "アニマルガールの生来の能力をスペシャルムーブとして表現したもの。体質特性と呼ばれる。特にコストを払わずに使用できるが、代わりに発動に条件が存在する。",
+    "$ref": "https://example.com/babyrousa_lab/special_move",
+    "properties": {
+        "effect": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "trigger": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "required": ["effect", "trigger"]
+}

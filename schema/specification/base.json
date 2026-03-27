@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/specification",
+    "title": "Specification",
+    "description": "性能オブジェクトの基底クラス。効果を持つアイテムやスキルなどには必ず一つ以上設定される。",
+    "type":"array",
+    "items": {
+        "type":"object",
+        "properties": {
+            "level": {
+                "type": "integer"
+            },
+            "detail": {
+                "type":"string"
+            }
+        },
+        "required": ["level"]
+    },
+    "minItems": 1,
+    "uniqueItems": true
+}

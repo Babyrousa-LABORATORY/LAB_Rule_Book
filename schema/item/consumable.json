@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/item/consumable",
+    "title": "Consumable",
+    "description": "使うことで効果を発揮するアイテム。'stack'に記載された個数分同じアイテムをストック出来るが、'willExpand'がtrueの場合は使う度に一つ消失する。",
+    "type":"object",
+    "properties": {
+        "willExpend": {
+            "type":"boolean"
+        },
+        "stack": {
+            "type":"integer",
+            "minimum": 1
+        },
+        "effect":{
+            "type":"array",
+            "items": {
+                "type":"string",
+                "minLength": 1
+            },
+            "minItems": 1
+        }
+    }
+}

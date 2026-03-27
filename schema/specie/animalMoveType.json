@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/specie/animal_move",
+    "title": "Animal Move Type",
+    "description": "アニマルムーブの特技タイプ。これによって使用可能な特技が変わる。",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type":"string",
+            "pattern": "[a-z0-9_]"
+        },
+        "name": {
+            "type":"string"
+        },
+        "detail": {
+            "type": "string"
+        },
+        "skill": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "trainCost": {
+                        "type":"integer",
+                        "minimum": 0
+                    }
+                },
+                "required": ["id"]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    }
+
+}

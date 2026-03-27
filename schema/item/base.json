@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/item",
+    "title": "Item",
+    "description": "アイテムの基底スキーマ。細かい分類は'category'プロパティから決まる。",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type":"string",
+            "pattern": "[a-z0-9_]",
+            "minLength": 1
+        },
+        "name": {
+            "type":"string",
+            "minLength": 1
+        },
+        "detail": {
+            "type": "string",
+            "minLength": 1
+        },
+        "effect": {
+            "type":"array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "price": {
+            "type":"integer",
+            "minimum": 0
+        },
+        "isSelling": {
+            "type":"boolean",
+            "default": false
+        },
+        "category": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0
+        },
+        "shield": {
+            "$ref": "https://example.com/babyrousa_lab/item/shield"
+        },
+        "consumable": {
+            "$ref": "https://example.com/babyrousa_lab/item/consumable"
+        }
+    },
+    "required": ["id", "name", "isSelling", "category"],
+    "allOf": [
+        {
+            "if": {
+                "properties": {
+                    "isSelling":{
+                        "const": true
+                    }
+                }
+            },
+            "then": {
+                "required": ["price"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "category":{
+                        "contains": {"const": "shield"}
+                    }
+                }
+            },
+            "then": {
+                "required": ["shield"]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "category":{
+                        "contains": {"const": "consumable"}
+                    }
+                }
+            },
+            "then": {
+                "required": ["consumable"]
+            }
+        }
+    ]
+}

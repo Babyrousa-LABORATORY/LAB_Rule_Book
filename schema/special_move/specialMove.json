@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/special_move/special_move",
+    "title": "Special Move",
+    "description": "スペシャルムーブ。普通にコストを支払って使用する。",
+    "$ref": "https://example.com/babyrousa_lab/special_move",
+    "properties": {
+        "restrict": {
+            "type": "string"
+        },
+        "specification":{
+            "$ref": "https://example.com/babyrousa_lab/specification/special_move"
+        }
+    },
+    "required": ["specification"]
+}

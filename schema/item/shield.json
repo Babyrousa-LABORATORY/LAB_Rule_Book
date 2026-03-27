@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://babyrousa_lab_master.org/shield",
+    "$id": "https://example.com/babyrousa_lab/item/shield",
     "title": "Shield",
-    "description": "Item that is used to cut damage when researchers was hit by enemies.",
+    "description": "盾としての効果。今作の盾は防具と言うよりHPの増強目的で使用する。",
     "type":"object",
     "properties": {
         "endurance": {
@@ -43,6 +43,5 @@
             },
             "minProperties": 1
         }
-    },
-    "required": ["endurance"]
+    }
 }

@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/special_move",
+    "title": "Special Move",
+    "description": "スペシャルムーブ(他ゲームでいうスキル)の基底スキーマ",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "pattern": "[a-z0-9_]",
+            "minLength": 1
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "detail": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": ["id", "name"]
+}

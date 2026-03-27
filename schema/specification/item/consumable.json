@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/babyrousa_lab/specification/consumable",
+    "title": "Consumable Specifications",
+    "description": "アイテムの消耗品としての性能。",
+    
+    "allOf": [
+        {"$ref": "https://example.com/babyrousa_lab/specification"},
+        {
+            "properties": {
+                "effect":{
+                    "type":"array",
+                    "items": {
+                        "type":"string",
+                        "minLength": 1
+                    },
+                    "minItems": 1
+                }
+            },
+            "required": ["effect"]
+        }
+    ]
+}
